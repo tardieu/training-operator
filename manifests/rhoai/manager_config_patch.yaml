@@ -12,3 +12,10 @@ spec:
         args:
         - "--zap-log-level=2"
         - "--gang-scheduler-name=scheduler-plugins"
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 500m
+            memory: 1000Mi
