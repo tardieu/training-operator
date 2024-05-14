@@ -11,7 +11,7 @@ spec:
         image: $(image)
         args:
         - "--zap-log-level=2"
-        - "--gang-scheduler-name=scheduler-plugins"
+        - "--gang-scheduler-name=scheduler-plugins-scheduler"
         resources:
           requests:
             cpu: 100m
