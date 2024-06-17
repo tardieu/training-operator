@@ -5,8 +5,17 @@ metadata:
 spec:
   template:
     spec:
+      priorityClassName: system-node-critical
       containers:
       - name:  training-operator
         image: $(image)
         args:
         - "--zap-log-level=2"
+        - "--gang-scheduler-name=scheduler-plugins-scheduler"
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 500m
+            memory: 1000Mi
